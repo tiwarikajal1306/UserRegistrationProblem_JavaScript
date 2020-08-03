@@ -21,12 +21,23 @@ if(checkLastName == true)
 else
    console.log("LastName is Ivalid name");
 
-let mailregex = RegExp("^[a-zA-Z0-9]+([._+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$");
+let mailRegex = RegExp("^[a-zA-Z0-9]+([._+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$");
 let mail = prompt('Enter Email')
 
-let checkEmail = firstNameRegex.test(firstName);
+let checkEmail = mailRegex.test(mail);
 
-if(checkFirstName == true)
+if(checkEmail == true)
         console.log("valid mail");
 else
         console.log("Invalid mail");
+
+let mobileRegex = RegExp("^[1-9]{2,5}[\ ]{1}[1-9]{1}[0-9]{9}$")
+let mobileNumber = prompt('Enter mobile number')
+
+let checkNumber = mobileRegex.test(mobileNumber);
+
+if(checkNumber == true)
+        console.log("valid mobile Number");
+else
+        console.log("Invalid mobile Number");
+
