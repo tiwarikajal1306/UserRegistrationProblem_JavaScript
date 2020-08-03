@@ -41,3 +41,13 @@ if(checkNumber == true)
 else
         console.log("Invalid mobile Number");
 
+
+let passwordRegexOf8Character = RegExp("^[0-9 a-z A-Z \! \@ \#\$\%\^\&\*]{8}$");
+let password = prompt('Enter password');
+
+let checkPassword = password1RegexOf8character.test(password)
+
+if(checkPassword == true)
+        console.log("valid password");
+else
+        console.log("Invalid password");
