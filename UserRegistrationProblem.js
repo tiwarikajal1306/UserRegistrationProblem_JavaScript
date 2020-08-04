@@ -71,3 +71,13 @@ if(checkPassword2 == true)
         console.log("valid password");
 else
         console.log("Invalid password");
+
+let passwordRegexContainSpecialCharacter = RegExp("^((?=.*[A-Z])(?=.*[0-9])([A-z0-9])(?=.*[^A-z0-9]){1}.{8,})$");
+let password3 = prompt('Enter password');
+
+let checkPassword3 = passwordRegexContainSpecialCharacter.test(password3)
+
+if(checkPassword3 == true)
+        console.log("valid password");
+else
+        console.log("Invalid password");
