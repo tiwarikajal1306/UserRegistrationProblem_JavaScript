@@ -42,12 +42,22 @@ else
         console.log("Invalid mobile Number");
 
 
-let passwordRegexOf8Character = RegExp("^[0-9 a-z A-Z \! \@ \#\$\%\^\&\*]{8}$");
+let passwordRegexOfCharacterLimit = RegExp("^[0-9 a-z A-Z \! \@ \#\$\%\^\&\*]{8,}$");
 let password = prompt('Enter password');
 
-let checkPassword = password1RegexOf8character.test(password)
+let checkPassword = passwordRegexOfCharacterLimit.test(password)
 
 if(checkPassword == true)
+        console.log("valid password");
+else
+        console.log("Invalid password");
+
+let passwordRegexContainUpperCaseLetter = RegExp("(?=.*[A-Z])[a-zA-Z]{8,}");
+let password1 = prompt('Enter password');
+
+let checkPassword1 = passwordRegexContainUpperCaseLetter.test(password1)
+
+if(checkPassword1 == true)
         console.log("valid password");
 else
         console.log("Invalid password");
