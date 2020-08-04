@@ -61,3 +61,13 @@ if(checkPassword1 == true)
         console.log("valid password");
 else
         console.log("Invalid password");
+
+let passwordRegexContainNumericNumber = RegExp("^(?=.*[A-Z])(?=.*[0-9])([A-z0-9]){8,}$");
+let password2 = prompt('Enter password');
+
+let checkPassword2 = passwordRegexContainNumericNumber.test(password2)
+
+if(checkPassword2 == true)
+        console.log("valid password");
+else
+        console.log("Invalid password");
